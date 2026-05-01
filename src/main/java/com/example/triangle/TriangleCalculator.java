@@ -1,7 +1,10 @@
 package com.example.triangle;
 
 public class TriangleCalculator {
-    private double a, b, c;
+//    public double expectedP;
+    private final double a;
+    private final double b;
+    private final double c;
 
     //конструктор
     public TriangleCalculator(double a, double b, double c) {
@@ -11,7 +14,7 @@ public class TriangleCalculator {
     }
     //Рассчитать площадь треугольника
     public double getArea() throws SideException {
-        double area = 0;
+        double area;
 
         if ((a >=1) && (a<100) &&(b>=1) && (b<100) && (c>=1) && (c < 100)) {
             double p = (a +b +c) / 2; //Полупериметр
@@ -24,8 +27,8 @@ public class TriangleCalculator {
     }
     //Расчитаем периметр треугольника
     public double getPerimetr() {
-        double p = (a + b + c); //Периметр
-        return p;
+        //Периметр
+        return (a + b + c);
     }
     //Рассчитаем тип треугольника
     public String calculate() {
