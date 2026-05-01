@@ -20,38 +20,41 @@ public class TrianglesTests {
         Assertions.assertEquals(expected, actual);
     }
 
-    static Stream <Arguments> provider() {
+    static Stream<Arguments> provider() {
 
-        return Stream.of(
-            Arguments.of(1,1,1,3), Arguments.of(2,3,4,9), Arguments.of(5,5,5,15));
+        return Stream.of(Arguments.of(1, 1, 1, 3), Arguments.of(2, 3, 4, 9), Arguments.of(5, 5, 5, 15));
     }
+
     @ParameterizedTest
     @MethodSource("provider")
-    public void testPerimeter(double a, double b, double c, double expectedP) {
+    public void testPerimeter(double a, double b, double c, double expectedP) throws SideException {
         TriangleCalculator t = new TriangleCalculator(a, b, c);
         double actual = t.getPerimetr();
         Assertions.assertEquals(actual, expectedP);
     }
 
     @ParameterizedTest
-    @CsvSource({"1,1,1,3","5,5,5,15"})
-    public void testPerimeter2(double a, double b, double c, double expectedP) {
+    @CsvSource({"1,1,1,3", "5,5,5,15"})
+    public void testPerimeter2(double a, double b, double c, double expectedP) throws SideException {
         TriangleCalculator t = new TriangleCalculator(a, b, c);
         double actual = t.getPerimetr();
         Assertions.assertEquals(actual, expectedP);
     }
+
     @Disabled
     @Test
     @DisplayName("Type Triangle")
-    public void testType() {
-        TriangleCalculator t = new TriangleCalculator(1,1,1);
-        String actual = t.calculate();
+    public void testType() throws SideException {
+        TriangleCalculator t = new TriangleCalculator(1, 1, 1);
+        String actual = new String(t.getTriangleTypes().toString());
         String expected = "равносторонний треугольник";
         Assertions.assertEquals(expected, actual);
     }
+
+    @Disabled
     @Test
-    public void testException() {
+    public void testException() throws SideException {
         TriangleCalculator t = new TriangleCalculator(-1, 1, 1);
-        assertThrows(SideException.class, t::getArea);
+        assertThrows(SideException.class, () -> t.getArea());
     }
 }

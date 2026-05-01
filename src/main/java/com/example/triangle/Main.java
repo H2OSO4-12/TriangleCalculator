@@ -5,10 +5,10 @@ package com.example.triangle;
 public class Main {
     static void main() throws SideException {
         TriangleCalculator t = new TriangleCalculator(1, 1, 1);
-        String rezult = t.calculate();
-        System.out.println( "Тип треугольника" + rezult);
-        System.out.println( "Площадь треугольника " + t.getArea());
-        System.out.println( "Периметр треугольника " + t.getPerimetr());
+        String rezult = t.getTriangleTypes().toString();
+        System.out.println("Тип треугольника " + rezult);
+        System.out.println("Площадь треугольника " + t.getArea());
+        System.out.println("Периметр треугольника " + t.getPerimetr());
 
     }
 }
