@@ -40,6 +40,7 @@ build/
 /.idea/
 /pom.xml/
 /.target/
-/.src/
 !/.gitignore
 /.mvn/
+/src/
+!/pom.xml
