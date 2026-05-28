@@ -35,5 +35,10 @@ build/
 ### VS Code ###
 .vscode/
 
-### Mac OS ###
-.DS_Store
+
+*.png
+*.idea
+*.mvn
+*.pom.xml
+*.target
+*./src
