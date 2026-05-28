@@ -36,9 +36,10 @@ build/
 .vscode/
 
 
-*./png
-*./idea
-*./mvn
-*./pom.xml
-*./target
-*./src
+/.png/
+/.idea/
+/pom.xml/
+/.target/
+/.src/
+!/.gitignore
+/.mvn/
