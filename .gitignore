@@ -30,7 +30,7 @@ target/
 /.nb-gradle/
 build/
 !**/src/main/**/build/
-!**/src/test/**/build/
+
 
 ### VS Code ###
 .vscode/
@@ -40,8 +40,7 @@ build/
 /.idea/
 /pom.xml/
 /.target/
+/.src/
 !/.gitignore
 /.mvn/
-/src/
-/pom.xml
-!/.idea/
+!/.idea
