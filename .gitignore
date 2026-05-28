@@ -37,11 +37,10 @@ build/
 
 
 /.png/
-/.idea/
 /pom.xml/
 /.target/
-!/.gitignore
+/.gitignore
 /.mvn/
 /src/
 /pom.xml
-!/.idea/
+/.idea/
