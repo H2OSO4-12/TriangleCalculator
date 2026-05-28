@@ -39,8 +39,6 @@ build/
 *.png
 *.idea
 *.mvn
-*.xml
+*.pom.xml
 *.target
-*.src
-
-
+*./src
