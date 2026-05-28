@@ -37,8 +37,10 @@ build/
 
 
 *.png
-*.idea
-*.mvn
-*.pom.xml
-*.target
+*./idea
+*./mvn
+*.xml
+*./target
 *./src
+
+
